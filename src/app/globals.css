@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Thunder';
+  src: url('https://ext.same-assets.com/709160556/3724877100.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thunder';
+  src: url('https://ext.same-assets.com/709160556/2953715775.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 42 33% 98%;
+    --foreground: 24 24% 12%;
+
+    --card: 42 33% 98%;
+    --card-foreground: 24 24% 12%;
+
+    --popover: 42 33% 98%;
+    --popover-foreground: 24 24% 12%;
+
+    --primary: 6 85% 55%;
+    --primary-foreground: 42 33% 98%;
+
+    --secondary: 25 40% 54%;
+    --secondary-foreground: 42 33% 98%;
+
+    --muted: 24 10% 85%;
+    --muted-foreground: 24 5% 45%;
+
+    --accent: 25 40% 54%;
+    --accent-foreground: 42 33% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 42 33% 98%;
+
+    --border: 24 5% 85%;
+    --input: 24 5% 85%;
+    --ring: 24 24% 12%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 24 24% 10%;
+    --foreground: 42 33% 98%;
+
+    --card: 24 24% 10%;
+    --card-foreground: 42 33% 98%;
+
+    --popover: 24 24% 10%;
+    --popover-foreground: 42 33% 98%;
+
+    --primary: 6 85% 55%;
+    --primary-foreground: 42 33% 98%;
+
+    --secondary: 25 40% 54%;
+    --secondary-foreground: 42 33% 98%;
+
+    --muted: 24 10% 25%;
+    --muted-foreground: 24 5% 65%;
+
+    --accent: 25 40% 54%;
+    --accent-foreground: 42 33% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 42 33% 98%;
+
+    --border: 24 5% 25%;
+    --input: 24 5% 25%;
+    --ring: 42 33% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Thunder', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
